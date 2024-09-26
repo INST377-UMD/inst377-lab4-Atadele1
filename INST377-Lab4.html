@@ -1,0 +1,72 @@
+
+<html>
+    <head>
+        <title>INST377-Lab 4</title>
+        <link rel="stylesheet" href="Lab4.css">
+    </head>
+
+    <body>
+        <h1 id="INST377-Lab 4">INST377- Lab 4</h1>
+        
+        <script>
+        function alertMe() {
+            var name = document.getElementById("firstname").value;
+            if (name) {
+                alert("Hi " + name + "!");
+            
+            }
+        }
+
+        let isBlue = true;
+        function changeColor() {
+            document.body.style.backgroundColor = isBlue ? 'aqua' : 'green';
+            isBlue = !isBlue;
+        }
+
+        function validateText() {
+            var text = document.getElementById("textInput").value;
+            var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            if (validation.test(text)) {
+                alert("The text contains special characters.");
+            } else {
+                alert("Has no special characters.");
+;
+            }
+        }
+
+        function addText() {
+            var heading = document.getElementById("INST377-Lab 4");
+            heading.textContent += "Add Text";
+        }
+        </script>
+
+      </div>
+    <div class="container">
+        <div class="section">
+        <form id= "alertMe">
+            <label for="firstname">Name:</label>
+            <input type="text" id="firstname" required>
+            <button type="submit" onclick="alertme()">Alert Me</button>
+        </form>
+    </div>
+    
+
+<div class="section">
+        <button onclick="changeColor()">Change Color</button>
+    </div>
+    <div class="section">
+        <form id="TextTester">
+            <label for="textInput">Text Tester :</label>
+            <input type="text" id="textInput">
+            <button type="submit" onclick="ValidateText()"> Validate Text</button>
+        </form>
+        <br>
+    </div>
+    <div class="section">
+        <button onclick="addText()">Add Text</button>
+    </div>
+</div>
+
+    
+    </body>
+</html>
